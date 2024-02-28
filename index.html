@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css"> <!--se conecta con el archivo styles-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+</head>
+<body>
+    <!-- MENU ENCABEZADO-->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Mateo</a >
+            </div>
+            <nav id="nav" >
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()" >INICIO</a></li>
+                    <li><a href="#sobreMi" onclick="seleccionar()" >SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()"  >TECNOLOGIAS</a></li>
+                    <li><a href="#cv" onclick="seleccionar()" >CURRICULUM</a></li>
+                    <li><a href="#proyectos" onclick="seleccionar()"  >PROYECTOS</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()"  >CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    <!-- SECCION DE INICIO-->
+   <section id="inicio" class="inicio">
+    <div class="contenido-banner">
+        <div class="contenedor-img">
+            <img  src="img/perfil.jpg" alt="">
+        </div>
+        <h1>MATEO SALAS</h1>
+        <H2> DESAROLLADOR FULL STACK JR</H2>
+        <div class="redes">
+            <a onclick="LinkedIn()" href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a onclick="copiarMail()" ><i class="fa-solid fa-envelope"></i></a>
+            
+        </div>
+    </div>
+    
+   </section>
+
+   <!--SECCION DE SOBRE MI-->
+   <section id="sobreMi" class="sobreMi">
+        <div class="contenido-section">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Mateo Salas y soy un Desarrollador FullStack Jr</span> 
+                Me he formado desde los últimos años del secundario en aprender el desarrollo de aplicaciones mediante
+                lenguajes de programación. He realizado proyectos con robótica aplicando C++, he diseñado desarrollos de consola y web 
+                en C# mediante los frameworks .NET y ASP.NET. Actualmente me encuentro practicando desarollos en Angular 17 y aprendiendo Java.
+                Mi objetivo a futuro es especializarme en el desarrollo Front-End y llegar a realizar desarrollo de apps móviles
+            </p>
+            <div class="fila">
+                <!--datos Personales-->
+                <div class="col">
+                 <h3>Datos Personales</h3>
+                 <ul>
+                    <li>
+                        <strong>Nacionalidad:</strong>
+                        Argentina
+                    </li>
+                    <li>
+                        <strong>Edad:</strong>
+                        23
+                    </li>
+                    <li>
+                        <strong>Idioma:</strong>
+                        Español
+                    </li>
+                    <li>
+                        <strong>Aptitudes:</strong>
+                        Programar
+                    </li>
+                    <li>
+                        <strong>Puesto:</strong>
+                        <span>Developer Full Stack</span>
+                    </li>
+                 </ul>
+                </div>
+                <!-- Intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="intereses">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>Viajar</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Lectura</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <span>Deportes</span>
+                        </div>
+                        <div class="intereses">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>Webs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="AbrirCV()">
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+   </section>
+
+    <!-- SECCION DE HABILIDADES -->
+     <section id="skills" class="skills">
+        <div class="contenido-section">
+            <h2>Habilidades</h2>
+            <div class="fila">
+                <!-- Tecnologias-->
+                <div class="col">
+                    <h3>Lenguajes</h3>
+                    <div class="skill">
+                        <span><img class="icon" src="img/c-share.png" alt=""> C#</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        
+                        <span><img class="icon" src="img/js.png" alt=""> JavaScript</span>
+                        
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><img class="icon" src="img/html-5.png" alt=""> <img class="icon" src="img/css-3.png" alt=""> Html & Css</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>                
+                    <div class="skill">
+                        <span><img class="icon" src="img/java.png" alt="">Java</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Frameworks</h3>
+                    <div class="skill">
+                        <span><img class="icon" src="img/square.png" alt=""> .NET</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><img class="icon" src="img/aspnet.png" alt=""> ASP.NET</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><img class="icon fa" src="img/NET_core.png" alt=""> .NET CORE</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><img class="icon" src="img/angular_icon.png" alt=""> ANGULAR</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Base de Datos</h3>
+                    <div class="skill">
+                        <span><img class="icon" src="img/base-de-datos.png" alt=""> SQL Server</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span><img class="icon" src="img/base-de-datos (1).png" alt=""> Oracle PL/SQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- SECCION DE CURRICULUM-->
+     <section id="cv" class="cv">
+        <div class="contenido-section">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col derecha" style="text-align: center;">
+                    <h3>Educación</h3>
+                </div>
+                <div class="col derecha"style="text-align: center;">
+                    <h3>Certificados</h3>
+
+                </div>
+            </div>                        
+                    <div class="fila">
+                        <div id="Universidad" class="columna item izquierda" onclick="mostrarTitulo('uni','uniC')" >
+                            <h4>Programación y Desarrollo</h4>
+                            <span class="casa">Universidad Tecnologica Nacional</span>
+                            <span class="fecha">2021 - En curso</span>
+                            <p> Cursando Actualmente materias de 3er y 4to cuatrimestre.
+                                Tecnologias: Html -Css -JavaScript - c# - Java - Sql Server
+                                Aprendizaje de WebApis : Api RestFull - CRUD
+                                Programación en Capas: Negocio -Servicios-Acceso a Datos
+                                Protocolo HTTP.                            
+                            </p>   
+                            <div id="uniC" class="conectori"style="display: none;">
+                                <div class="circuloi">
+    
+                                </div>
+                            </div>                         
+                        </div>
+                        
+                        <div class="columna item derecha" id="uni" style="display: none;">
+                            <h4>Programación y Desarrollo</h4>
+                            <img class="imagen " src="img/certificados/Certificado-en-curso.png" alt="">
+                            <span onclick="verCertificado()" class="expandir">expandir</span>                            
+                        </div>
+
+                    </div>
+                    
+                    <div class="fila">
+                        <div class="columna item izquierda" onclick="mostrarTitulo('juego','juegoC')">
+                            <h4>Diseño y Programación de VideoJuegos Jr</h4>
+                            <span class="casa">Instituto de Capacitaciones Arbrok</span>
+                            <span class="fecha">2023 - 2023</span>
+                            <p> Capacitación desde la creación de Videojuegos 2d y personajes 3d, hasta el desarrollo del codigo del juego. 
+                                Tecnologias:3D Builder - ZBrush - Godot  </p>
+                            <div id="juegoC" class="conectori " style="display: none;">
+                                <div class="circuloi">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div id="juego" class="columna item derecha" style="display: none;">
+                            <h4>Programación y Desarrollo</h4>
+                            <img class="imagen " src="img/certificados/Certificado-videojuegos-Salas.png" alt="">
+                            <span onclick="VerCertificado('juego')" class="expandir">expandir</span>                            
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="columna item izquierda" onclick="mostrarTitulo('curso','cursoC')">
+                            <h4>Cursos Realizados</h4>
+                            <span class="casa">Autodidacta</span>
+                            <span class="fecha">2020 - Actualmente</span>
+                            <p> Cursos y certificaciones realizados en plataformas Udemy, CorderHouse Youtube, Domestica. </p>
+                            <div id="cursoC" class="conectori" style="display: none;">
+                                <div class="circuloi">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div id="curso" class="carousel carousel-dark slide columna item derecha"style="display: none;">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class="imagen" src="img/certificados/Certificado-Fundamentos-de-la-Programacion-Udemy.png" alt="">
+                                <span class="expandir">expandir</span> 
+                              </div>
+                              <div class="carousel-item">
+                                <img class="imagen" src="img/certificados/argentina_programa_2022.png" alt="">
+                                <span class="expandir">expandir</span> 
+                              </div>
+                              <!-- <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                              </div>
+                            </div> -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#curso" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#curso" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+        </div>
+     </section>
+
+     <!-- SECCION DE PROYECTOS-->
+     <section id="proyectos" class="proyectos">
+        <div class="contenido-section">
+            <h2>PROYECTOS & EXPERIENCIA</h2>
+            <div class="galeria">
+                <div class="proyecto" >
+                    <img src="img/trasusarg.jpg" alt="">                    
+                    <div class="overlay" data-bs-toggle="modal" data-bs-target="#AbrirExperiencia" >
+                        <h3>Experiencia</h3>
+                        <p>Desarrollos en Trasus</p>
+                    </div>                  
+                </div>
+                <div class="proyecto">
+                    <img class="" src="img/webPersonal.png" alt="">
+                    <div class="overlay" data-bs-toggle="modal" data-bs-target="#AbrirPortfolio" >
+                        <h3>Web Personal</h3>
+                        <p>Proyecto</p>
+                    </div>                    
+                </div>
+                <!-- <div class="proyecto">
+                    <img src="img/p3.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Ejemplo h3</h3>
+                        <p>Ejemplo p</p>
+                    </div>
+                </div> -->
+                <!-- <div class="proyecto">
+                    <img src="img/p4.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Ejemplo h3</h3>
+                        <p>Ejemplo p</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p5.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Ejemplo h3</h3>
+                        <p>Ejemplo p</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p6.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Ejemplo h3</h3>
+                        <p>Ejemplo p</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+     </section>
+
+     <!-- SECCION DE CONTACTO -->
+     <section id="contacto" class="contacto">
+        <div class="contenido-section">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario de Contacto -->
+                <div class="col">
+                    <form action="https://formspree.io/f/mdoqzdvl" method="POST">
+                        <input type="text" name="Nombre" placeholder="Nombre">
+                        <input type="text" name="Telefono" placeholder="Teléfono">
+                        <input type="text" name="email" placeholder="Email">
+                        <input type="text" name="tema" placeholder="Tema">
+                        <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                        <button type="submit">
+                            Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                        <input type="hidden" name="_captcha" value="false"></input>
+                        <input type="hidden" name="_next" value="mostrarModal()"></input>
+                    </form>                    
+                </div>
+                <!--MAIL Y Boton Copiar-->            
+                <div class="col">
+                    <div class="mail">
+                        <div class="info">
+                            <ul>
+                                <li>
+                                    <i  class="fa-solid fa-envelope"></i>
+                                    Email: mateosalas0767@gmail.com 
+                                    <i id="copiar" onclick="Copiar()" class="fa-regular fa-paste "></i>
+                                    <i id="copiado" class="fa-solid fa-clipboard-check" style="display: none;"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+            </div>            
+        </div>
+     </section> 
+
+     <!-- Vertically centered modal -->
+     <!-- Modal Experiencia -->
+    <div class="modal fade" id="AbrirExperiencia" tabindex="-1" aria-labelledby="AbrirExperiencia" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Experiencia Desarrollando en Trasus</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="img/trasus.png" alt="">
+                <br>
+            <p>Me encuentro realizando proyectos desde el 2022, cuento con 1 año y medio de Experiencia como Desarrollador FullStack Jr.               
+            </p>
+            <ul>
+                <li>Realice proyectos CRUD en paginas web ASP.NET.</li>
+                <li>Para el Front-End utilice las tecnologias: Html - Css - Ajax -Jquery - Javascript</li>
+                <li>Para el Back-End utilice : C# - .NET</li>
+                <li>Con la base de datos realice Procedimientos Almacenados, Triggers, Consultas dinamicas.</li>
+            </ul>
+            <p>Por acuerdos de confidencialidad no puedo mostrar el codigo ni imagenes de los proyectos en que participe. Realice paginas web
+                con funciones ABM desde la base hasta mostrar en pantalla los datos. <br>
+            Actualmente comence a desarrollar con framework Angular para el Front-End y para el Back-End trabajo con .NET Core</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Vertically centered modal -->
+     <!-- Modal Proyectos -->
+    <div class="modal fade" id="AbrirPortfolio" tabindex="-1" aria-labelledby="AbrirPortfolio" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Proyecto Web Personal</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselWeb" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/Portfolio/Portfolio1.png" class="d-block w-100" alt="">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/Portfolio/Portfolio2.png" class="d-block w-100" alt="">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/Portfolio/Portfolio3.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/Portfolio/Portfolio4.png" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselWeb" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselWeb" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                <p>Desarrollo de una Web Personal para mostrar mis conocimientos y lo que fui aprendiendo. <br>
+                     Realizado con las Tecnologias: Html - Css - JavaScript - Bootstrap <br>
+                <a href="">Ver Codigo</a>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+   
+     <!-- FOOTER -->
+     <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a onclick="LinkedIn()"  href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a onclick="copiarMail()" ><i class="fa-solid fa-envelope"></i></a>
+            <div id="copiedMessage">Mail copiado</div>
+        </div>
+        
+     </footer>
+     <script src="functions.js">     
+
+     </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    
+</body>
+
+</html>
